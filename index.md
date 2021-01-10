@@ -15,11 +15,11 @@ Digital twins are software analogs for devices, processes, or collections of oth
 twins.  The term "digital twin" is used to distinguish the DT form of computing from other
 software modeling approaches.  The difference with DTs is that they emphasize being "live" independently addressable objects that advance their state from continuous input from their counterparts.
 
-For DT Lab purposes, DTs have the following characteristics:
+In DT Lab, DTs have the following characteristics:
 
-Each DT...
+*Each DT...*
   * computes its own state
-  * receives a continuous input from their counterparts
+  * receives continuous input from their counterparts
   * is independently addressable - we can ask any DT for its state at any time
 
 ## DT Lab Architecture
