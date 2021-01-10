@@ -17,14 +17,14 @@ persistence via event sourcing.
 
 ## What is a DT?
 
-Digital twins are software analogs for devices, processes, or collections of other digital
+Digital twins are software analogs for devices, processes, or collections of digital
 twins.  The term "digital twin" is used to distinguish the DT from other software modeling
 with an emphasis on individually programmable software objects, each of whose state is
 recalculated continuously as observations arrive in a low latency unbounded stream from the DT's counterpart.
 
 In DT Lab, DTs have the following characteristics:
 
-*Each DT...*
+***Each DT...***
   * computes its own state
   * receives continuous input from counterparts
   * is independently addressable - ask any DT about its state any time
@@ -35,8 +35,8 @@ See [here](ARCHITECTURE.md)
 
 ## Project Status
 
-DT Lab is currently a single-contributor project by Ed Sweeney and licensed 
-with [the MIT Open Source license](https://github.com/DTLaboratory/dtlab-scala-alligator/blob/master/LICENSE).
+DT Lab is currently a single-contributor project by [Ed Sweeney](https://github.com/navicore) 
+and licensed with [the MIT Open Source license](https://github.com/DTLaboratory/dtlab-scala-alligator/blob/master/LICENSE).
 
 Pull requests, feedback, and collaboration welcome.
 
