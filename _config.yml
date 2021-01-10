@@ -4,3 +4,4 @@ description: a digital twin runtime software system
 show_downloads: false
 github:
   repository_url: https://github.com/DTLaboratory
+  is_project_page: true
