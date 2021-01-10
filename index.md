@@ -26,14 +26,22 @@ In DT Lab, DTs have the following characteristics:
 
 *Each DT...*
   * computes its own state
-  * receives continuous input from their counterparts
-  * is independently addressable - we can ask any DT for its state at any time
+  * receives continuous input from counterparts
+  * is independently addressable - ask any DT about its state any time
 
 ## DT Lab Architecture
 
-See [full arch doc here](ARCHITECTURE.md)
+See [here](ARCHITECTURE.md)
 
 ## Project Status
+
+DT Lab is currently a single developer project licensed with [the MIT Open Source lisence](https://github.com/DTLaboratory/dtlab-scala-alligator/blob/master/LICENSE).
+
+Pull requests, feedback, and collaboration welcome.
+
+We believe the features and component responsibility divisions in DT Lab are
+worth studying, implementing, and refining in other languages and platforms - we
+intend to create Python, Rust, and Erlang/Elixir implementations, time permitting.
 
 ### Links
 
