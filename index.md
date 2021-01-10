@@ -1,6 +1,12 @@
-## Welcome to the DT Lab Software Project
+# DT Lab Software Project
+
+![alt text](docs/logo_cropped.png)
+
+## Overview
 
 This page documents where the various parts of the project are hosted or supported from.
+
+## Project Status
 
 ### Links
 
