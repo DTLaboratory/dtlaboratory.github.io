@@ -1,5 +1,3 @@
-![alt text](assets/images/logo_cropped.png)
-
 ## What DT Lab?
 
 DT Lab is a actor-oriented distributed computing framework that can be programmed
