@@ -13,7 +13,7 @@ software modeling approaches.  The difference with DTs is that they emphasize be
 
 For DT Lab purposes, DTs have the following characteristics:
 
-  Each DT:
+Each DT...
   * computes its own state
   * receives a continuous input from their counterparts
   * is independently addressable - we can ask any DT for its state at any time
