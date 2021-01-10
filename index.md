@@ -1,8 +1,22 @@
 ![alt text](docs/logo_cropped.png)
 
-## Overview
+## What is a DT?
 
-This page documents where the various parts of the project are hosted or supported from.
+Digital twins are software analogs for devices, processes, or collections of other digital
+twins.  The term "digital twin" is used to distinguish the DT form of computing from other
+software modeling approaches.  The difference with DTs is that they emphasize being "live" independently addressable objects that advance their state from continuous input from their counterparts.
+
+For DT Lab purposes, DTs have the following characteristics:
+
+  Each DT:
+  * computes its own state
+  * receives a continuous input from their counterparts
+  * is independently addressable - we can ask any DT for its state at any time
+
+## What DT Lab?
+
+DT Lab is a actor-oriented distributed computing framework that can be programmed
+to host clusters of DTs.
 
 ## Project Status
 
