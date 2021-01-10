@@ -28,11 +28,12 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
 
-          {% if site.github.is_project_page %}
-            <a id="forkme_banner" href="{{ site.github.repository_url }}">on GitHub</a>
-          {% endif %}
-
       <section id="main_content" class="inner">
+
+        {% if site.github.is_project_page %}
+          <a id="forkme_banner" href="{{ site.github.repository_url }}">on GitHub</a>
+        {% endif %}
+
         {{ content }}
       </section>
     </div>
