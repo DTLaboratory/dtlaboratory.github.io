@@ -1,4 +1,7 @@
-## What DT Lab?
+Digital Twin Laboratory
+============
+a digital twin runtime framework
+------------
 
 DT Lab is a actor-oriented distributed computing framework that can be programmed
 to host clusters of DTs (Digital Twins).
