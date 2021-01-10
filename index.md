@@ -1,5 +1,10 @@
 ![alt text](docs/logo_cropped.png)
 
+## What DT Lab?
+
+DT Lab is a actor-oriented distributed computing framework that can be programmed
+to host clusters of DTs (Digital Twins).
+
 ## What is a DT?
 
 Digital twins are software analogs for devices, processes, or collections of other digital
@@ -12,11 +17,6 @@ For DT Lab purposes, DTs have the following characteristics:
   * computes its own state
   * receives a continuous input from their counterparts
   * is independently addressable - we can ask any DT for its state at any time
-
-## What DT Lab?
-
-DT Lab is a actor-oriented distributed computing framework that can be programmed
-to host clusters of DTs.
 
 ## Project Status
 
