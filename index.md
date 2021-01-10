@@ -1,4 +1,4 @@
-![alt text](docs/logo_cropped.png)
+![alt text](assets/images/logo_cropped.png)
 
 ## What DT Lab?
 
