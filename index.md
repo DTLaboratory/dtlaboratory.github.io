@@ -24,7 +24,7 @@ In DT Lab, DTs have the following characteristics:
 
 ## DT Lab Architecture
 
-See [full arch doc here](docs/ARCHITECTURE.md)
+See [full arch doc here](ARCHITECTURE.md)
 
 ## Project Status
 
