@@ -12,11 +12,15 @@ Typical applications are IOT, AR, Logistics, general purpose streaming analytics
 any problem that requires near-realtime continuous calculation of actionable
 states at scale.
 
+The DT Lab implementation values actor programming, asynchronous messaging, and
+persistence via event sourcing.
+
 ## What is a DT?
 
 Digital twins are software analogs for devices, processes, or collections of other digital
-twins.  The term "digital twin" is used to distinguish the DT form of computing from other
-software modeling approaches.  The difference with DTs is that they emphasize being "live" independently addressable objects that advance their state from continuous input from their counterparts.
+twins.  The term "digital twin" is used to distinguish the DT from other software modeling
+with an emphasis on individually programmable software objects, each of whose state is
+recalculated continuously as observations arrive in a low latency unbounded stream from the DT's counterpart.
 
 In DT Lab, DTs have the following characteristics:
 
