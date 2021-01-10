@@ -1,5 +1,3 @@
-# DT Lab Software Project
-
 ![alt text](docs/logo_cropped.png)
 
 ## Overview
