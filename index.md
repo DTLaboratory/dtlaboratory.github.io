@@ -35,7 +35,8 @@ See [here](ARCHITECTURE.md)
 
 ## Project Status
 
-DT Lab is currently a single developer project licensed with [the MIT Open Source lisence](https://github.com/DTLaboratory/dtlab-scala-alligator/blob/master/LICENSE).
+DT Lab is currently a single-contributor project by Ed Sweeney and licensed 
+with [the MIT Open Source license](https://github.com/DTLaboratory/dtlab-scala-alligator/blob/master/LICENSE).
 
 Pull requests, feedback, and collaboration welcome.
 
