@@ -5,7 +5,7 @@ Digital Twin Laboratory
 
 -------
 
-DT Lab is a actor-oriented distributed computing framework that can be programmed
+DT Lab is an actor-oriented distributed computing framework that can be programmed
 to host clusters of DTs (Digital Twins).
 
 Typical applications are IOT, AR, Logistics, general purpose streaming analytics -
