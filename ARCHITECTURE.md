@@ -50,13 +50,14 @@ The system is developed with modern cloud infrastructure-as-code tools and
 practices in mind.  A new deployment should be able to be instantiated via
 CI/CD pipelines in the cloud or via an IOT solution push of firmware/appware
 to a a smart edge device with no manual intervention.  Input and output should
-be in standard marshaling syntaxes (JSON, etc...) for off the shelf integration
+be in standard marshaling syntaxes (JSON, etc...) for off-the-shelf integration
 with other systems.
 
 Building Block View
 -------
 
-Static decomposition of the system, abstractions of source-code, shown as hierarchy of white boxes (containing black boxes), up to the appropriate level of detail.
+![My image](diagrams/building_blocks_1.png)
+
 
 Runtime View
 -------

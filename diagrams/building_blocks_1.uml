@@ -1,0 +1,10 @@
+@startuml
+interface "Out-Stream\nof Assesments\nto your analytic\nsystems" as out1
+interface "In-Stream\nof Telemetry\nfrom your IOT\nfleet" as in1
+in1 -> [DT1]
+out1 <-- [DT1]
+in1 -> [DT2]
+out1 <-- [DT2]
+in1 -> [DT3]
+out1 <-- [DT3]
+@enduml
