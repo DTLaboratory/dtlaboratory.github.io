@@ -62,7 +62,7 @@ Building Block View
 Runtime View
 -------
 
-Behavior of building blocks as scenarios, covering important use cases or features, interactions at critical external interfaces, operation and administration plus error and exception behavior.
+![My image](diagrams/runtime_1.png)
 
 Deployment View
 -------

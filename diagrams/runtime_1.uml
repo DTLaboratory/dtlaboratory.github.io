@@ -1,0 +1,18 @@
+@startuml
+participant device as d1
+box "Public Cloud\nCommon IOT PAAS\nlike Azure IOTHub\nor AWS IOT"
+boundary    iothub as iothub
+end box
+box "DT Lab Service\nhosted in a\ncontainer-ready\nservice like Kubernetes"
+control     ingest as "Ingest Service"
+entity      dt1    as "DT1"
+entity      dt2    as "DT2"
+entity      dt3    as "DT3"
+entity      dtn    as "DT(n)"
+queue       out1  as "Queue\nlike Kafka\nor MQTT"
+end box
+d1 -> iothub : To Cloud 
+iothub -> ingest : To DT Lab via\nREST or MQTT
+ingest -> dt1 : To DT\nvia REST
+dt1 -> out1: To queue\nvia webhook for\nAnalytics or\nLogicstics\nor fleet mgt, etc...
+@enduml
