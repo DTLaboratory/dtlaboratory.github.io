@@ -148,9 +148,9 @@ intend to create Python, Rust, and Erlang/Elixir implementations, time permittin
 1. Docker images are at [Dockerhub](https://hub.docker.com/orgs/dtlaboratory/repositories) (for now)
 1. [UI](https://sandbox.dtlaboratory.com) - will host a react.js UI for talking to DTs - currently only demo for Auth0 SSO
 1. [Notebooks (Jupyterhub)](https://notebook.dtlaboratory.com) - contact Navicore to get your github ID whitelisted
-1. DtLab API [Docs](https://dtlaboratory.com/dtlab-alligator/doc/dtlab/) - OpenAPI 3.0
+1. DtLab API [Docs](https://somind.tech/dtlab-alligator/doc/dtlab/) - OpenAPI 3.0
 1. DtLab API sandbox endpoint - https://sandbox.dtlaboratory.com/dtlab-alligator/(type/actor)
-1. DtLab Ingest API [Docs](https://dtlaboratory.com/dtlab-alligator/doc/dtlab-ingest/) - OpenAPI 3.0
+1. DtLab Ingest API [Docs](https://somind.tech/dtlab-alligator/doc/dtlab-ingest/) - OpenAPI 3.0
 1. DtLab Ingest API sandbox endpoint - https://sandbox.dtlaboratory.com/dtlab-alligator/extractor/(specId)
 1. Security is Implemented by [Auth0](https://manage.auth0.com/dashboard/us/navicore/) - contact Navicore for access
 1. Project Kanban with backlog and help wanted tags is [here](https://github.com/orgs/DtLaboratory/projects/1)
