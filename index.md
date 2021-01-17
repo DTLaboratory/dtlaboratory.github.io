@@ -22,6 +22,15 @@ twins.  The term "digital twin" is used to distinguish the DT from other softwar
 with an emphasis on individually programmable software objects, each of whose state is
 recalculated continuously as observations arrive in a low latency unbounded stream from the DT's counterpart.
 
+Examples of observations and events monitored by a DTs are:
+
+  * Machine DTs might monitor a machine's engine temperature
+  * Supply chain replenishment DTs might monitor retail sales transaction completions
+  * Trading bot DTs might want to know about the new availability of funds from a bank account wire transfer
+  * Energy Efficiency DTs might monitor doors that stay open too long
+  * Security DTs might fire an alert if a motion detector is triggered
+  * A hemisphere evacuation alerting DT might monitor an approaching asteroid's current speed
+
 In DT Lab, DTs have the following characteristics:
 
 ***Each DT...***
