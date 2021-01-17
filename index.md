@@ -25,15 +25,15 @@ recalculated continuously as observations arrive in a low latency unbounded stre
 Examples of observations and events monitored by a DTs are:
 
   * Machine DTs might monitor a machine's engine temperature
-  * Supply chain replenishment DTs might monitor retail sales transaction completions
+  * Supply chain replenishment DTs monitor retail sales transaction completions
   * Trading bot DTs might want to know about the new availability of funds from a bank account wire transfer
-  * Energy Efficiency DTs might monitor doors that stay open too long
-  * Security DTs might fire an alert if a motion detector is triggered
+  * Energy Efficiency DTs monitor doors that stay open too long
+  * A truck fleet DT might adjust truck assignments if observes vehicle mileage readings and it anticipates future mileage-based maintenance window overlaps - it can schedule long haul vs short haul assignments to stagger the out-of-service maintenance windows across the fleet
+  * Security DTs fire alerts if motion detectors are triggered
   * A hemisphere evacuation alerting DT might monitor an approaching asteroid's current speed
 
-In DT Lab, DTs have the following characteristics:
+In DT Lab, Each DT:
 
-***Each DT...***
   * computes its own state
   * receives continuous input from counterparts
   * is independently addressable - ask any DT about its state any time
