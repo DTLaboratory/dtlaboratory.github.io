@@ -11,25 +11,25 @@ nwdiag {
   }
 
   network INTERNET {
-    devices [shape = cloud, description = "real world devices"];
+    devices [shape = cloud, description = "real world devices\n<&audio-spectrum*4>"];
   }
 
   network PUBLIC_IP {
     devices;
-    nginx[address = 198.x.x.x, description = "<&signal*4>\nK8s\nIngress\nController"];
+    nginx[shape= participant, address = 198.x.x.x, description = "<&audio-spectrum*4>\nK8s\nIngress\nController"];
   }
 
   network PRIVATE_NETWORK {
-    nginx[address = 10.x.x.x, description = "<&signal*4>\nK8s\nIngress\nController"];
-    dtlabingestmqtt[address = 10.x.x.x, shape = participant, description = "<&signal*4>\nDTLab\nMQTT\nClient\nContainer(s)"];
-    dtlabingest[address = 10.x.x.x, shape =  participant, description = "<&cog*4>\nDTLab\nIngest\nProcessor\nContainer(s)"];
+    nginx[shape = participant, address = 10.x.x.x, description = "<&audio-spectrum*4>\nK8s\nIngress\nController"];
+    dtlabingestmqtt[address = 10.x.x.x, shape = participant, description = "<&audio-spectrum*4>\nDTLab\nMQTT\nClient\nContainer(s)"];
+    dtlabingest[address = 10.x.x.x, shape =  participant, description = "<&signal*4>\nDTLab\nIngest\nProcessor\nContainer(s)"];
     dtlab[address = 10.x.x.x, shape = participant, description = "<&people*4>\nDTLab\nContainer(s)\n\n<<DTs Live Here>>"];
     
   }
 
   network CLOUD_PROVIDER_PAAS {
     dtlab[address = 178.x.x.x, shape = participant, description = "<&people*4>\nDTLab\nContainer(s)\n\n<<DTs Live Here>>"];
-    dtlabingest[address = 178.x.x.x, shape =  participant, description = "<&cog*4>\nDTLab\nIngest\nProcessor\nContainer(s)"];
+    dtlabingest[address = 178.x.x.x, shape =  participant, description = "<&signal*4>\nDTLab\nIngest\nProcessor\nContainer(s)"];
     db[shape = database, address = 178.x.x.x, description = "<&spreadsheet*4>\nPAAS\nPostgresql\nor Cassandra\nOffering"];
   }
 
