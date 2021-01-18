@@ -103,16 +103,18 @@ with other systems.
 Building Block View
 -------
 
-![My image](diagrams/building_blocks_1.png)
+![Building Block View](diagrams/building_blocks_1.png)
 
 
 Runtime View
 -------
 
-![My image](diagrams/runtime_1.png)
+![Runtime View](diagrams/runtime_1.png)
 
 Deployment View
 -------
+
+![Deployment View](diagrams/deployment.png)
 
 Technical infrastructure with environments, computers, processors, topologies. Mapping of (software) building blocks to infrastructure elements.
 
