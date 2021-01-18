@@ -105,18 +105,28 @@ Building Block View
 
 ![Building Block View](diagrams/building_blocks_1.png)
 
+The primary building blocks are the digital twin and an incoming unbounded
+stream of observations. The state of the digital twins can be processed by
+traditional off-the-shelf data analytics tools.
 
 Runtime View
 -------
 
 ![Runtime View](diagrams/runtime_1.png)
 
+The system tends to flow from left to right with observations starting at the
+left and DT state shared to standard tools at the right.
+
+
 Deployment View
 -------
 
 ![Deployment View](diagrams/deployment.png)
 
-Technical infrastructure with environments, computers, processors, topologies. Mapping of (software) building blocks to infrastructure elements.
+A normal deployment would be a managed Kubernetes offering from a cloud provider
+paired with a managed database offering.  However, all the DTLab Docker images
+make no Kubernetes assumption and the system can be run in any Docker-enabled
+environment.
 
 Cross Cutting Concepts
 -------
