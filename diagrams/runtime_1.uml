@@ -9,8 +9,9 @@ entity      dt1    as "DT1"
 entity      dt2    as "DT2"
 entity      dt3    as "DT3"
 entity      dtn    as "DT(n)"
-queue       out1  as "Queue\nlike Kafka\nor MQTT"
 end box
+queue       out1  as "HTTP-enabled\nQueue like\nKafka or MQTT"
+
 d1 -> iothub : To Cloud 
 iothub -> ingest : To DT Lab via\nREST or MQTT
 ingest -> dt1 : To DT\nvia REST
