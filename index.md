@@ -152,7 +152,7 @@ Risks
 ## Project Status
 
 DT Lab is currently a single-contributor project by [Ed Sweeney](https://github.com/navicore) 
-and licensed with [the MIT Open Source license](https://github.com/DTLaboratory/dtlab-scala-alligator/blob/master/LICENSE).
+and licensed with [the MIT Open Source license](https://github.com/dtlaboratory/dtlab-scala-alligator/blob/master/LICENSE).
 
 Pull requests, feedback, and collaboration welcome.
 
@@ -162,20 +162,20 @@ intend to create Python, Rust, and Erlang/Elixir implementations, time permittin
 
 ### Links
 
-1. [Github](https://github.com/DtLaboratory) - all the code is Open Source
+1. [Github](https://github.com/dtlaboratory) - all the code is Open Source
 1. CICD is managed by Github [Actions](https://github.com/features/actions)
-1. Code quality is monitored by [Codacy](https://app.codacy.com/organizations/gh/DtLaboratory/repositories)
+1. Code quality is monitored by [Codacy](https://app.codacy.com/organizations/gh/dtlaboratory/repositories)
 1. SBT dependency updates are managed by the [Scala Steward](https://github.com/scala-steward-org/scala-steward) bot PRs
 1. Docker images are at [Dockerhub](https://hub.docker.com/orgs/dtlaboratory/repositories) (for now)
 1. [UI](https://sandbox.dtlaboratory.com) - will host a react.js UI for talking to DTs - currently only demo for Auth0 SSO
 1. [Notebooks (Jupyterhub)](https://notebook.somind.tech) - contact Navicore to get your github ID whitelisted
-1. DtLab API [Docs](https://somind.tech/dtlab-alligator/doc/dtlab/) - OpenAPI 3.0
-1. DtLab API sandbox endpoint - https://sandbox.somind.tech/dtlab-alligator/(type/actor)
-1. DtLab Ingest API [Docs](https://somind.tech/dtlab-alligator/doc/dtlab-ingest/) - OpenAPI 3.0
-1. DtLab Ingest API sandbox endpoint - https://sandbox.somind.tech/dtlab-alligator/extractor/(specId)
+1. DTLab API [Docs](https://somind.tech/dtlab-alligator/doc/dtlab/) - OpenAPI 3.0
+1. DTLab API sandbox endpoint - https://sandbox.somind.tech/dtlab-alligator/(type/actor)
+1. DTLab Ingest API [Docs](https://somind.tech/dtlab-alligator/doc/dtlab-ingest/) - OpenAPI 3.0
+1. DTLab Ingest API sandbox endpoint - https://sandbox.somind.tech/dtlab-alligator/extractor/(specId)
 1. Security is Implemented by [Auth0](https://manage.auth0.com/dashboard/us/navicore/) - contact Navicore for access
-1. Project Kanban with backlog and help wanted tags is [here](https://github.com/orgs/DtLaboratory/projects/1)
-1. This page is generated from the `gh-pages` branch of the [DtLaboratory.github.io](https://github.com/DtLaboratory/DtLaboratory.github.io/blob/gh-pages/index.md)
+1. Project Kanban with backlog and help wanted tags is [here](https://github.com/orgs/dtlaboratory/projects/1)
+1. This page is generated from the `gh-pages` branch of the [DTLaboratory.github.io](https://github.com/dtlaboratory/dtlaboratory.github.io/blob/gh-pages/index.md)
 
 ### Hosting
 
@@ -183,10 +183,10 @@ intend to create Python, Rust, and Erlang/Elixir implementations, time permittin
 1. TLS is implemented with Lets Encrypt.
 1. DT event sourcing is persisted to Digital Ocean managed Postgres.
 1. IOT Device Management and Connectivity via Cloud PAAS
-    * AWS IOT Core is deployed with webhook forwarding to the DtLab sandbox Ingest Service (contact Navicore for access)
+    * AWS IOT Core is deployed with webhook forwarding to the DTLab sandbox Ingest Service (contact Navicore for access)
     * MQTT (TBD)
     * Azure IotHub (TBD)
 
 ### Support or Contact
 
-Want more information or to get involved?  Open an issue [here](https://github.com/DtLaboratory/DtLaboratory.github.io/issues) and say hello or DM @navicore on Twitter.
+Want more information or to get involved?  Open an issue [here](https://github.com/dtlaboratory/dtlaboratory.github.io/issues) and say hello or DM @navicore on Twitter.
