@@ -21,15 +21,15 @@ nwdiag {
 
   network PRIVATE_NETWORK {
     nginx[shape = participant, address = 10.x.x.x, description = "<&audio-spectrum*4>\nK8s\nIngress\nController"];
-    dtlabingestmqtt[address = 10.x.x.x, shape = participant, description = "<&audio-spectrum*4>\nDTLab\nMQTT\nClient\nContainer(s)"];
+    dtlabingestmqtt[address = 10.x.x.x, shape = participant, description = "<&audio-spectrum*4>\nDTLab\nMQTT\nClient\nContainer(s)\n\npulling in raw telemetry\nvia mqtt client\nconnections"];
     dtlabingest[address = 10.x.x.x, shape =  participant, description = "<&signal*4>\nDTLab\nIngest\nProcessor\nContainer(s)"];
     dtlab[address = 10.x.x.x, shape = participant, description = "<&people*4>\nDTLab\nContainer(s)\n\n<<DTs Live Here>>"];
     
   }
 
   network CLOUD_PROVIDER_PAAS {
-    dtlab[address = 178.x.x.x, shape = participant, description = "<&people*4>\nDTLab\nContainer(s)\n\n<<DTs Live Here>>"];
-    dtlabingest[address = 178.x.x.x, shape =  participant, description = "<&signal*4>\nDTLab\nIngest\nProcessor\nContainer(s)"];
+    dtlab[address = 178.x.x.x, shape = participant, description = "<&people*4>\nDTLab\nContainer(s)\nw/Authz sidecar\ncontainers\n\n<<DTs Live Here>>"];
+    dtlabingest[address = 178.x.x.x, shape =  participant, description = "<&signal*4>\nDTLab\nIngest\nProcessor\nContainer(s)\nw/Authz sidecar\ncontainers\n\nraw json telemetry\nenriched and\nformatted here"];
     db[shape = database, address = 178.x.x.x, description = "<&spreadsheet*4>\nPAAS\nPostgresql\nor Cassandra\nOffering"];
   }
 
