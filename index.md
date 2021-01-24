@@ -76,10 +76,9 @@ The DT Lab system is operated as a utility and service.
 In its initial releases, DT Lab can support DTs for sources that emit telemetry
 in JSON format.  Other data formats will be added as they are requested.
 
-External automation can interact with the DTs via the DT Lab HTTP API.
-A normal use case would be for an external system to register a webhook with
-a DT Lab cluster and listen for assessments calculated by the DTs as their
-state advances.
+External automation can interact with the DTs via the DT Lab HTTP API. An
+external system will be able to register a webhook with a DT Lab cluster and
+listen for all assessments calculated by all DTs as each DT state advances.
 
 DT Lab may be operated by an organization for its own purposes or by a
 service provider for its customers - perhaps as a SAAS.
