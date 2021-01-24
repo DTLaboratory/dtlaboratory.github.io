@@ -18,8 +18,8 @@ persistence via event sourcing.
 ## What is a DT?
 
 Digital twins are software analogs for devices, people, processes, or collections of digital
-twins.  The term "digital twin" is used to distinguish the DT from other software modeling
-with an emphasis on individually programmable software objects, each of whose state is
+twins.  The term "digital twin" is used to distinguish the DT from other software modeling.
+DTs emphasize individually programmable software objects, each of whose state is
 recalculated continuously as observations arrive in a low latency unbounded stream from the DT's counterpart.
 
 Examples of observations and events monitored by a DTs are:
@@ -34,9 +34,9 @@ Examples of observations and events monitored by a DTs are:
 
 In DT Lab, Each DT:
 
-  * computes its own state
-  * receives continuous input from counterparts
-  * is independently addressable - ask any DT about its state any time
+  * Computes its own state
+  * Receives continuous input from counterparts
+  * Is independently addressable - ask any DT about its state any time
 
 ## DT Lab Quick Start
 
