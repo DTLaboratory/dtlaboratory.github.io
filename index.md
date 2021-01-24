@@ -17,7 +17,7 @@ persistence via event sourcing.
 
 ## What is a DT?
 
-Digital twins are software analogs for devices, processes, or collections of digital
+Digital twins are software analogs for devices, people, processes, or collections of digital
 twins.  The term "digital twin" is used to distinguish the DT from other software modeling
 with an emphasis on individually programmable software objects, each of whose state is
 recalculated continuously as observations arrive in a low latency unbounded stream from the DT's counterpart.
