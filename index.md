@@ -153,15 +153,20 @@ Important, expensive, critical, large scale or risky architecture decisions incl
   * No complex database models improperly designed - fewer scaling problems due to poor partitioning and clustering.
   * Rewind and recalculation (back-testing) features are enabled with event sourcing.
   * Prototype-based programming of DTs is enabled via event sourcing.
-4. Fault-tolerance via containerization, sharding / partitioning - the deployment must still work with n-1 containers.
+4. DT Singletons
+  * Containerization w/ sharding and actor resurrection - all DTs must advance their state and respond to queries w/o issue with the system at n-1 containers.
 
 
 Quality Requirements
 -------
 
-* Process back-testing of 10 million devices 24X faster than the live system collects the data.
-* Survive chaos agent testing.
-* Actor state query API must remain responsive under all ingest loads.
+1. Horizontally Scalable
+  * Process back-testing of 1 million devices 24X faster than the live system collects the data.
+  * Actor state query API must remain responsive under all ingest loads.
+2. Fault Tolerant
+  * Survive chaos agent testing.
+  * All DTs must advance their state and respond to queries w/o issue with the system at n-1 containers.
+
 
 Risks
 -------
