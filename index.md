@@ -180,9 +180,9 @@ and licensed with [the MIT Open Source license](https://github.com/dtlaboratory/
 
 Pull requests, feedback, and collaboration welcome.
 
-We believe the features and component responsibility divisions in DT Lab are
-worth studying, implementing, and refining in other languages and platforms - we
-intend to create Python, Rust, and Erlang/Elixir implementations, time permitting.
+We believe DT Lab is worth studying, implementing, and refining in other
+programming languages and platforms - we intend to create Python, Rust, and
+Erlang/Elixir implementations, time permitting.
 
 ### Links
 
