@@ -26,11 +26,11 @@ Examples of observations and events monitored by a DTs are:
 
   * Machine DTs might monitor a machine's engine temperature
   * Supply chain replenishment DTs monitor retail sales transaction completions
-  * Trading bot DTs might want to know about the new availability of funds from a bank account wire transfer
+  * Trading bots might monitor a bank account DT to act on the new availability of funds
   * Energy Efficiency DTs monitor doors that stay open too long
-  * A truck fleet DT might adjust truck assignments if observes vehicle mileage readings and it anticipates future mileage-based maintenance window overlaps - it can schedule long haul vs short haul assignments to stagger the out-of-service maintenance windows across the fleet
+  * A truck fleet DT monitoring truck odometer readings might adjust truck assignments if it anticipates future mileage-based maintenance window overlaps - it can schedule long haul vs short haul assignments to stagger the out-of-service maintenance windows across the fleet
   * Security DTs fire alerts if motion detectors are triggered
-  * A hemisphere evacuation alerting DT might monitor an approaching asteroid's current speed
+  * A hemisphere evacuation alerting system might act on an approaching asteroid's DT's current speed and distance values
 
 In DT Lab, Each DT:
 
@@ -55,10 +55,10 @@ The DT Lab framework enables a user to instantiate a system of digital twins
 in the public cloud or on-prem cluster of computers.
 
 The project goal is that a useful system can be instantiated from configured
-Dt Lab components with complete security and integration features.  It is
-also the goal of DT LAB to support configuration entirely in a declarative
-style deployment-time configuration via REST-like API - no dropping down into
-first class programming languages required to host useful DTs.
+DT Lab components with complete security and integration features.  It is
+also the goal of DT Lab to support configuration entirely in a declarative
+deployment-time style via REST-like API - no first class programming language
+coding should be required to program useful DTs.
 
 Constraints
 -------
@@ -86,7 +86,7 @@ service provider for its customers - perhaps as a SAAS.
 
 If operated as a SAAS, the operator would need to provide a front-end to
 its customers that supported multi-tenancy.  No changes to the
-DT Lab code base would be required to support multi-tenancy but the API calls
+DT Lab base code would be required to support multi-tenancy but the API calls
 to operate the system on behalf of the SAAS users should be sharded across
 clusters with tenant ID enforced in the sharding.
 
@@ -94,11 +94,14 @@ Solution Strategy
 -------
 
 The system is developed with modern cloud infrastructure-as-code tools and
-practices in mind.  A new deployment should be able to be instantiated via
-CI/CD pipelines in the cloud or via an IOT solution push of firmware/appware
-to a a smart edge device with no manual intervention.  Input and output should
-be in standard marshaling syntaxes (JSON, etc...) for off-the-shelf integration
-with other systems.
+practices in mind.  A new deployment can be instantiated via CI/CD pipelines
+in the cloud or via an IOT solution push of firmware/appware to a a smart
+edge device with no manual intervention.  Input from the DT's analogs must
+arrive in standard marshaling syntaxes (JSON, etc...) for out-of-the-box
+integration.  Output is marshaled in JSON and is available as an unbounded
+stream so that it can be processed by modern analytics tools like Apache Spark,
+Grafana, Elastic Search, or accumulated in cloud Blob services like Azure
+Storage or AWS S3, etc...
 
 Building Block View
 -------
@@ -123,26 +126,43 @@ Deployment View
 
 ![Deployment View](diagrams/deployment.png)
 
-A normal deployment would be a managed Kubernetes offering from a cloud provider
-paired with a managed database offering.  However, all the DTLab Docker images
-make no Kubernetes assumption and the system can be run in any Docker-enabled
-environment.
+A normal deployment would be managed Kubernetes from a cloud provider paired
+with a managed database.  However, all the DTLab Docker images make no
+Kubernetes or PAAS-database assumption and the system can be run in any
+Docker-enabled environment.
 
 Cross Cutting Concepts
 -------
 
-Overall, principal regulations and solution approaches relevant in multiple parts (→ cross-cutting) of the system. Concepts are often related to multiple building blocks. Include different topics like domain models, architecture patterns and -styles, rules for using specific technology and implementation rules.
+Actor programming, event sourcing, and 100% API config are the main cross
+cutting implementation concepts used in individual components.
 
 Architectural Decisions
 -------
 
 Important, expensive, critical, large scale or risky architecture decisions including rationales.
 
+1. Scala and Akka
+  * The first implementation is written in Scala.
+  * Actor programming and pattern matching are leveraged throughout the code - these two features are harder to use in other languages.  The choices were between Scala and Erlang/Elixir to get these features and Erlang/Elixir has not been made container-friendly yet.  Scala is a bit more accessible than Erlang/Elixir because of the popularity of the JVM it runs on on integration with Java.
+  * Risk is the Scala community - ugh.
+2. Webhooks
+  * Pushing queue processing to the outer edges of the system and using webhooks and HTTP as the main composability approach.  Composing with webhooks can be optimized via sidecar containers.
+  * A risk is HTTP overhead - future implementations will probably want gRPC or similar intra-system binary APIs.
+3. Event Sourcing
+  * Auditable
+  * No complex database models improperly designed - fewer scaling problems due to poor partitioning and clustering.
+  * Rewind and recalculation (back-testing) features are enabled with event sourcing.
+  * Prototype-based programming of DTs is enabled via event sourcing.
+4. Fault-tolerance via containerization, sharding / partitioning - the deployment must still work with n-1 containers.
+
 
 Quality Requirements
 -------
 
-Quality requirements as scenarios, with quality tree to provide high-level overview. The most important quality goals should have been described in section 1.2. (quality goals).
+* Process back-testing of 10 million devices 24X faster than the live system collects the data.
+* Survive chaos agent testing.
+* Actor state query API must remain responsive under all ingest loads.
 
 Risks
 -------
