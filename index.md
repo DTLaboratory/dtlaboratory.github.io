@@ -104,6 +104,25 @@ stream so that it can be processed by modern analytics tools like Apache Spark,
 Grafana, Elastic Search, or accumulated in cloud Blob services like Azure
 Storage or AWS S3, etc...
 
+
+### NO BREAKING API CHANGES
+
+Each repository name has the service name, the computer language
+implementation, and the release name.  The initial release names are
+[animals](https://gist.github.com/navicore/b578e4c6e15d125b1a04ec522e295acf) in
+alphabetic order (open to better names).  The idea is that a newer incompatible
+approach to the service implementation can fork off without the overhead and
+false hopes of a git fork.
+
+*See Hickey on semantic versioning, "If it is not backward compatible, rename it."*
+
+```
+<projectName>-<langName>-<versionName>
+
+eg: dtlab-scala-alligator
+```
+
+
 Building Block View
 -------
 
