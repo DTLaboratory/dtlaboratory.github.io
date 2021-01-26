@@ -110,9 +110,10 @@ Search, or accumulated in cloud Blob services like Azure Storage or AWS S3, etc.
 Each repository name has the service name, the computer language
 implementation, and the release name.  The initial release names are
 [animals](https://gist.github.com/navicore/b578e4c6e15d125b1a04ec522e295acf) in
-alphabetic order (open to better names).  The idea is that a newer incompatible
-approach to the service implementation can fork off without the overhead and
-false hopes of a git fork.
+alphabetic order (open to better names).  A newer incompatible
+approach to the service implementation will fork a version without the overhead and
+false hopes of a git fork.  ie: the successor to the alligator version is the
+badger version.
 
 *See Hickey on semantic versioning, "If it is not backward compatible, rename it."*
 
