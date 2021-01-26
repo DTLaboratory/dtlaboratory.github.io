@@ -113,7 +113,7 @@ implementation, and the version name.  The initial version names are
 alphabetic order (open to better names).
 
 The redundancy of embedding the
-version in the name instead of just advancing semantic numeral major value is
+version in the name instead of just advancing the semantic numeral major value is
 due to the propensity of engineers to introduce breaking changes to APIs and the
 propensity of users of APIs to not expect breaking changes.
 
