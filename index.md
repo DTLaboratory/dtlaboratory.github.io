@@ -9,20 +9,22 @@ DT Lab is an actor-oriented distributed computing framework for hosting
 DTs (Digital Twins).
 
 Typical applications are Internet of Things (IOT), Augmented Reality (AR),
-Logistics, streaming analytics - any problem that requires
-near-realtime continuous calculation of actionable states at scale.  DT Lab is
-especially suited to modeling complex systems of participants that combine
-and advance over time in otherwise difficult to predict ways.
+Logistics, streaming analytics - any problem that requires near-realtime
+continuous calculation of actionable states at scale.  DT Lab is especially
+suited to modeling complex systems of participants that combine and advance
+over time in otherwise difficult to predict ways.
 
 The DT Lab implementation values actor programming, asynchronous messaging, and
 persistence via event sourcing.
 
 ## What is a DT?
 
-Digital twins are software analogs for devices, people, processes, or collections of digital
-twins.  The term "digital twin" is used to distinguish the DT from other software modeling.
-DTs emphasize individually programmable software objects, each of whose state is
-recalculated continuously as observations arrive in a low latency unbounded stream from the DT's counterpart.
+Digital twins are software analogs for devices, people, processes, or
+collections of digital twins.  The term "digital twin" is used to distinguish
+the DT from other software modeling. DTs emphasize individually programmable
+software objects, each of whose state is recalculated continuously as
+observations arrive in a low latency unbounded stream from the DT's
+counterpart.
 
 Examples of observations and events monitored by a DTs are:
 
@@ -95,15 +97,15 @@ Solution Strategy
 -------
 
 The system is developed with modern cloud infrastructure-as-code tools and
-practices in mind.  A new deployment can be instantiated via CI/CD pipelines
-in the cloud or via an IOT solution push of firmware/appware to a smart
-edge device with no manual intervention.
+practices in mind.  A new deployment can be instantiated via CI/CD pipelines in
+the cloud or via an IOT solution push of firmware/appware to a smart edge
+device with no manual intervention.
 
-Input from the DT's analogs must arrive in standard marshaling syntaxes
-(JSON, etc...) for out-of-the-box integration.  Output is marshaled in JSON
-and is available as an unbounded stream so that it can be processed by modern
-analytics tools like OpenTSDB, InfluxdB, Apache Spark, Grafana, Elastic
-Search, or accumulated in cloud Blob services like Azure Storage or AWS S3, etc...
+Input from the DT's analogs must arrive in standard marshaling syntaxes (JSON,
+etc...) for out-of-the-box integration.  Output is marshaled in JSON and is
+available as an unbounded stream so that it can be processed by modern
+analytics tools like OpenTSDB, InfluxdB, Apache Spark, Grafana, Elastic Search,
+or accumulated in cloud Blob services like Azure Storage or AWS S3, etc...
 
 #### NO BREAKING API CHANGES
 
@@ -112,16 +114,21 @@ implementation, and the version name.  The initial version names are
 [animals](https://gist.github.com/navicore/b578e4c6e15d125b1a04ec522e295acf) in
 alphabetic order (open to better names).
 
-The redundancy of embedding the
-version in the name instead of just advancing the semantic numeral major value is
-due to the propensity of engineers to introduce breaking changes to APIs and the
-propensity of users of APIs to not expect breaking changes.
+The redundancy of embedding the version in the name instead of just advancing
+the semantic numeral major value is due to the propensity of engineers to
+introduce breaking changes to APIs.  The breaking change may be decided upon by
+different team members that the team members that are picking the semantic
+version change - an incomplete release document may allow breaking API changes
+into a minor version or update version
+- this happens ALL THE TIME.  So we feel it is easier to never stop any API
+regression detection automated test cases - it is never OK to break backwards
+compatibility.
 
-In this approach, a newer incompatible implementation will fork a
-version without the overhead and false hopes of a git fork.  ie: the successor
-to the alligator version is the badger version and no one should expect the
-badger version to work with code designed for the alligator version.  However,
-we promise that all future releases of alligator will support all software that
+In this approach, a newer incompatible implementation will fork a version
+without the overhead and false hopes of a git fork.  ie: the successor to the
+alligator version is the badger version and no one should expect the badger
+version to work with code designed for the alligator version.  However, we
+promise that all future releases of alligator will support all software that
 works with all earlier releases of alligator.
 
 *See Hickey on semantic versioning, "If it is not backward compatible, rename it."*
