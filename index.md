@@ -117,11 +117,11 @@ alphabetic order (open to better names).
 The redundancy of embedding the version in the name instead of just advancing
 the semantic numeral major value is due to the propensity of engineers to
 introduce breaking changes to APIs.  The breaking change may be decided upon by
-different team members that the team members that are picking the semantic
+different team members than the team members that are picking the semantic
 version change - an incomplete release document may allow breaking API changes
-into a minor version or update version
-- this happens ALL THE TIME.  So we feel it is easier to never stop any API
-regression detection automated test cases - it is never OK to break backwards
+into a minor version or update version. This happens ALL THE TIME.  So we feel
+it is easier to never stop any API regression detection automated test cases in
+favor of an API-breaking change - it is never OK to break backwards
 compatibility.
 
 In this approach, a newer incompatible implementation will fork a version
@@ -129,7 +129,7 @@ without the overhead and false hopes of a git fork.  ie: the successor to the
 alligator version is the badger version and no one should expect the badger
 version to work with code designed for the alligator version.  However, we
 promise that all future releases of alligator will support all software that
-works with all earlier releases of alligator.
+has ever worked with earlier releases of alligator.
 
 *See Hickey on semantic versioning, "If it is not backward compatible, rename it."*
 
