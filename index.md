@@ -114,29 +114,32 @@ implementation, and the version name.  The initial version names are
 [animals](https://gist.github.com/navicore/b578e4c6e15d125b1a04ec522e295acf) in
 alphabetic order (open to better names).
 
-The redundancy of embedding the version in the name instead of just advancing
-the semantic numeral major value is due to the propensity of engineers to
-introduce breaking changes to APIs.  The breaking change may be decided upon by
-different team members than the team members that are picking the semantic
-version change - an incomplete release document may allow breaking API changes
-into a minor version or update version. This happens ALL THE TIME.  So we feel
-it is easier to never stop any API regression detection automated test cases in
-favor of an API-breaking change - it is never OK to break backwards
-compatibility.
-
-In this approach, a newer incompatible implementation will fork a version
-without the overhead and false hopes of a git fork.  ie: the successor to the
-alligator version is the badger version and no one should expect the badger
-version to work with code designed for the alligator version.  However, we
-promise that all future releases of alligator will support all software that
-has ever worked with earlier releases of alligator.
+The redundancy of embedding the version in the component name instead of just
+advancing the semantic numeral major value is due to the propensity of
+engineers to introduce breaking changes to APIs.  We want incompatible code to
+be obvious, not subtle.  It is never OK to break backwards compatibility in DT
+Lab.
 
 *See Hickey on semantic versioning, "If it is not backward compatible, rename it."*
+
+In this project, a newer backwards-incompatible implementation will fork
+a version without the overhead and false hopes of a git fork.  The successor to
+the alligator version is the badger version and no one should expect the badger
+version to work with code designed for the alligator version. However, we
+promise that all future releases of alligator will support all software that
+has ever worked with earlier releases of alligator.  The badger version may not
+be a full feature set of alligator and may not even be of the quality of
+alligator and alligator could back-port badger features or keep implementing
+new features as long is it does not break existing APIs.  The new name merely
+indicates incompatibility.
 
 ```
 <projectName>-<langName>-<versionName>
 
-eg: dtlab-scala-alligator
+example 1: dtlab-scala-alligator
+example 2: dtlab-rust-alligator
+example 3: dtlab-rust-badger
+example 4: dtlab-ingest-rust-badger
 ```
 
 
