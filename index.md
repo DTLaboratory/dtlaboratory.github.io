@@ -108,7 +108,7 @@ Search, or accumulated in cloud Blob services like Azure Storage or AWS S3, etc.
 #### NO BREAKING API CHANGES
 
 Each repository name contains the service name, the computer language
-implementation, and the version name.  The initial release names are
+implementation, and the version name.  The initial version names are
 [animals](https://gist.github.com/navicore/b578e4c6e15d125b1a04ec522e295acf) in
 alphabetic order (open to better names).
 
