@@ -107,13 +107,22 @@ Search, or accumulated in cloud Blob services like Azure Storage or AWS S3, etc.
 
 #### NO BREAKING API CHANGES
 
-Each repository name has the service name, the computer language
-implementation, and the release name.  The initial release names are
+Each repository name contains the service name, the computer language
+implementation, and the version name.  The initial release names are
 [animals](https://gist.github.com/navicore/b578e4c6e15d125b1a04ec522e295acf) in
-alphabetic order (open to better names).  A newer incompatible
-approach to the service implementation will fork a version without the overhead and
-false hopes of a git fork.  ie: the successor to the alligator version is the
-badger version.
+alphabetic order (open to better names).
+
+The redundancy of embedding the
+version in the name instead of just advancing semantic numeral major value is
+due to the propensity of engineers to introduce breaking changes to APIs and the
+propensity of users of APIs to not expect breaking changes.
+
+In this approach, a newer incompatible implementation will fork a
+version without the overhead and false hopes of a git fork.  ie: the successor
+to the alligator version is the badger version and no one should expect the
+badger version to work with code designed for the alligator version.  However,
+we promise that all future releases of alligator will support all software that
+works with all earlier releases of alligator.
 
 *See Hickey on semantic versioning, "If it is not backward compatible, rename it."*
 
