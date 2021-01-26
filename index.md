@@ -97,13 +97,13 @@ Solution Strategy
 The system is developed with modern cloud infrastructure-as-code tools and
 practices in mind.  A new deployment can be instantiated via CI/CD pipelines
 in the cloud or via an IOT solution push of firmware/appware to a smart
-edge device with no manual intervention.  Input from the DT's analogs must
-arrive in standard marshaling syntaxes (JSON, etc...) for out-of-the-box
-integration.  Output is marshaled in JSON and is available as an unbounded
-stream so that it can be processed by modern analytics tools like Apache Spark,
-Grafana, Elastic Search, or accumulated in cloud Blob services like Azure
-Storage or AWS S3, etc...
+edge device with no manual intervention.
 
+Input from the DT's analogs must arrive in standard marshaling syntaxes
+(JSON, etc...) for out-of-the-box integration.  Output is marshaled in JSON
+and is available as an unbounded stream so that it can be processed by modern
+analytics tools like OpenTSDB, InfluxdB, Apache Spark, Grafana, Elastic
+Search, or accumulated in cloud Blob services like Azure Storage or AWS S3, etc...
 
 ### NO BREAKING API CHANGES
 
