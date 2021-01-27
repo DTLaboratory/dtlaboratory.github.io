@@ -42,7 +42,11 @@ In DT Lab, Each DT:
   * Receives continuous input from counterparts
   * Is independently addressable - ask any DT about its state any time
 
-## DT Lab Quick Start
+## DT Lab Quick Start (via Docker)
+
+TODO TODO TODO
+
+## DT Lab Quick Start from Code
 
 Perquisite is a Postgres DB - we are currently testing with Digital Ocean's managed Postres offering but should work with any post-9.6 Postgres.
 
