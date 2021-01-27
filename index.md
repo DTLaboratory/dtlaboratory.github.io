@@ -44,6 +44,9 @@ In DT Lab, Each DT:
 
 ## DT Lab Quick Start (via Docker)
 
+Perquisite is a Postgres DB - we are currently testing with Digital Ocean's managed Postres offering but should work with any post-9.6 Postgres.
+
+```bash
 TODO TODO TODO
 
 ## DT Lab Quick Start from Code
