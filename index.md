@@ -44,9 +44,26 @@ In DT Lab, Each DT:
 
 ## DT Lab Quick Start
 
-TODO TODO TODO
+Perquisite is a Postgres DB - we are currently testing with Digital Ocean's managed Postres offering but should work with any post-9.6 Postgres.
 
-## DT Lab Usage
+```bash
+git clone git@github.com:DTLaboratory/dtlab-scala-alligator.git
+cd dtlab-scala-alligator
+sbt assembly  # to create a superjar
+
+export POSTGRES_HOST="<YOUR PGSQL HOST>"
+export POSTGRES_PORT=<DB PORT>
+export POSTGRES_DB="<DB NAME>"
+export POSTGRES_USER="<DB USER>"
+export POSTGRES_PASSWORD="<DB PWD>"
+
+sbt run
+
+# now you can interact with the unsecured on port 8080 - see examples dir for REST API usage
+# see https://somind.tech/dtlab-alligator/doc/dtlab/ for Open API docs
+```
+
+## DT Lab Fully Functioning Cloud Deployment
 
 TODO TODO TODO
 
