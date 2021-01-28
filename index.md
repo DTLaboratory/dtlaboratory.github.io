@@ -26,7 +26,7 @@ counterpart.
 Examples of observations and events monitored by a DTs are:
 
   * Machine DTs might monitor a machine's engine temperature
-  * Supply chain replenishment DTs monitor retail sales transaction completions
+  * Supply chain replenishment DTs may monitor retail sales transaction completions
   * Trading bots might monitor a bank account DT to act on the new availability of funds
   * Energy Efficiency DTs monitor doors that stay open too long
   * A truck fleet DT monitoring truck odometer readings might adjust truck assignments if it anticipates future mileage-based maintenance window overlaps - it can schedule long haul vs short haul assignments to stagger the out-of-service maintenance windows across the fleet
