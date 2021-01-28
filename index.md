@@ -44,15 +44,20 @@ In DT Lab, Each DT:
   * Receives continuous input from counterparts
   * Is independently addressable - ask any DT about its state any time
 
-## DT Lab Quick Start (via Docker)
+## DT Lab Dependencies
 
-Perquisite is a Postgres DB - we are currently testing with Digital Ocean's managed Postres offering but should work with any post-9.6 Postgres.
+  * A database that supports JDBC. We currently develop with Postgres DB - specifically Digital Ocean's managed Postres offering but should work with any post-9.6 Postgres.
+  * Java and a Java Virtual Machine - development is currently done on Java 11 and 13
+  
+### DT Lab Quick Start (via Docker)
+
+  * See dependencies above
 
 TODO TODO TODO
 
-## DT Lab Quick Start from Code
+### DT Lab Quick Start from Code
 
-Perquisite is a Postgres DB - we are currently testing with Digital Ocean's managed Postres offering but should work with any post-9.6 Postgres.
+  * See dependencies above
 
 ```bash
 git clone git@github.com:DTLaboratory/dtlab-scala-alligator.git
