@@ -14,9 +14,6 @@ continuous calculation of actionable states at scale.  DT Lab is especially
 suited to modeling complex systems of participants that combine and advance
 over time in otherwise difficult to predict ways.
 
-The DT Lab implementation values actor programming, asynchronous messaging, and
-persistence via event sourcing.
-
 ## What is a DT?
 
 Digital twins are software analogs for devices, people, processes, or
@@ -119,10 +116,12 @@ clusters with tenant ID enforced in the sharding.
 Solution Strategy
 -------
 
+The DT Lab implementation values actor programming, asynchronous messaging, and
+persistence via event sourcing.
+
 The system is developed with modern cloud infrastructure-as-code tools and
-practices in mind.  A new deployment can be instantiated via CI/CD pipelines in
-the cloud or via an IOT solution push of firmware/appware to a smart edge
-device with no manual intervention.
+practices in mind.  A new deployment can be instantiated in the cloud or via
+an IOT solution pushing firmware/appware to a smart edge device
 
 Input from the DT's analogs must arrive in standard marshaling syntaxes (JSON,
 etc...) for out-of-the-box integration.  Output is marshaled in JSON and is
