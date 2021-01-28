@@ -16,7 +16,7 @@ continuous calculation of actionable states at scale.  DT Lab is especially
 suited to modeling complex systems of participants that combine and advance
 over time in otherwise difficult to predict ways.
 
-**** STATUS: UNDER CONSTRUCTION - follow the github link in the [blue box](https://github.com/dtlaboratory) above to get the code published so far ****
+___STATUS: UNDER CONSTRUCTION - follow the github link in the [blue box](https://github.com/dtlaboratory) above to get the code published so far___
 
 ## What is a DT?
 
