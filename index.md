@@ -139,7 +139,7 @@ or accumulated in cloud Blob services like Azure Storage or AWS S3, etc...
 Each repository name contains the service name, the computer language
 implementation, and the version name.  The initial version names are
 [animals](https://gist.github.com/navicore/b578e4c6e15d125b1a04ec522e295acf) in
-alphabetic order (open to better names).
+alphabetic order.
 
 The redundancy of embedding the version in the component name instead of just
 advancing the semantic numeral major value is due to the propensity of
@@ -147,18 +147,23 @@ engineers to introduce breaking changes to APIs.  We want incompatible code to
 be obvious, not subtle.  It is never OK to break backwards compatibility in DT
 Lab.
 
-*See Hickey on semantic versioning, "If it is not backward compatible, rename it."*
+*See [Hickey](https://www.youtube.com/watch?v=oyLBGkS5ICk) on semantic
+versioning, "If it is not backward compatible, rename it."*
 
-In this project, a newer backwards-incompatible implementation will fork
-a version without the overhead and false hopes of a git fork.  The successor to
-the alligator version is the badger version and no one should expect the badger
-version to work with code designed for the alligator version. However, we
-promise that all future releases of alligator will support all software that
-has ever worked with earlier releases of alligator.  The badger version may not
-be a full feature set of alligator and may not even be of the quality of
-alligator and alligator could back-port badger features or keep implementing
-new features as long is it does not break existing APIs.  The new name merely
-indicates incompatibility.
+We make an explicit commitment to the user. A new backwards-incompatible
+implementation will live in a new repository of a different name without the
+overhead and false hopes of a git fork merge and semantic version number
+advance. The successor to the
+[alligator](https://github.com/DTLaboratory/dtlab-scala-alligator) version that
+has a backwards-incompatible change is the
+[badger](https://github.com/DTLaboratory/dtlab-scala-badger) version and no user
+should expect the badger version to work with code designed for the alligator
+version. However, we promise that all future releases of alligator will support
+all software that has ever worked with earlier releases of alligator.  The
+badger version may not be a full feature set of alligator and may not even be
+of the quality of alligator and alligator could back-port badger features or
+keep implementing new features as long is it does not break existing APIs.  The
+new name merely indicates incompatibility.
 
 ```
 <projectName>-<langName>-<versionName>
