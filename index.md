@@ -16,6 +16,9 @@ continuous calculation of actionable states at scale.  DT Lab is especially
 suited to modeling complex systems of participants that combine and advance
 over time in otherwise difficult to predict ways.
 
+# Table of Contents
+{:toc}
+
 ## What is a DT?
 
 Digital twins are software analogs for devices, people, processes, or
