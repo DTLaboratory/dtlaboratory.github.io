@@ -10,6 +10,14 @@ Architecture Documentation
 
 _this is the project's architecture documentation - follow the github link in the [blue box](https://github.com/dtlaboratory) above to get the code published so far_
 
+-------
+
+___STATUS: UNDER CONSTRUCTION - to run the software requires patience with the
+state of the documentation and the tediousness of the initial API
+ergonomics.___
+
+-------
+
 DT Lab is an actor-oriented distributed computing framework for hosting DTs
 (Digital Twins).
 
@@ -20,8 +28,6 @@ Reality (AR), Logistics, streaming analytics - any problem that requires
 near-realtime continuous calculation of actionable states at scale.  DT Lab is
 especially suited to modeling complex systems of participants that combine and
 advance over time in otherwise difficult to predict ways.
-
-___STATUS: UNDER CONSTRUCTION - follow the github link in the [blue box](https://github.com/dtlaboratory) above to get the code published so far___
 
 ## What is a DT?
 
