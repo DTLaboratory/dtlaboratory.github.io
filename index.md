@@ -8,7 +8,7 @@ Architecture Documentation
 
 -------
 
-_this is the master architecture document - follow the github link in the [blue box](https://github.com/dtlaboratory) above to get the code published so far_
+_this is the project's architecture documentation - follow the github link in the [blue box](https://github.com/dtlaboratory) above to get the code published so far_
 
 DT Lab is an actor-oriented distributed computing framework for hosting
 DTs (Digital Twins).
