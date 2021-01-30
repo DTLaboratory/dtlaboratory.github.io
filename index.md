@@ -1,9 +1,14 @@
 Digital Twin Laboratory
 ============
 
+Architecture Documentation
+------
+
 ***a digital twin runtime framework***
 
 -------
+
+_this is the master architecture document - follow the github link in the [blue box](https://github.com/dtlaboratory) above to get the code published so far_
 
 DT Lab is an actor-oriented distributed computing framework for hosting
 DTs (Digital Twins).
