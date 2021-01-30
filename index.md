@@ -232,8 +232,16 @@ Docker-enabled environment.
 Cross Cutting Concepts
 -------
 
-Actor programming, event sourcing, and 100% API config are the main cross
-cutting implementation concepts used in individual components.
+  * Actor programming - We value actor programming not so much as a means of
+                        parallelism but as a way to build a system we can
+                        then reason about.  Search Youtube for a great interview
+                        of Alan Kay by Joe Armstrong to learn more of this perspective.
+  * Event Sourcing - in support of the goal of 
+    * "Explainable AI"
+    * Audits
+    * Replay features
+    * "What if" and back-test scenarios using the prototype-based DT clone feature
+  * 100% Config by HTTP API
 
 Architectural Decisions
 -------
