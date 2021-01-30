@@ -206,16 +206,16 @@ The system tends to flow from left to right with observations starting at the
 left and DT state shared to standard tools at the right.
 
 Data in the above deployment is read from a remote MQTT server by a container
-instantiated from the (DT Lab MQTT Ingest
-Service)[https://github.com/DTLaboratory/dtlab-ingest-mqtt].
+instantiated from the [DT Lab MQTT Ingest
+Service](https://github.com/DTLaboratory/dtlab-ingest-mqtt).
 
-The Ingest MQTT client then posts the incoming raw telemetry to the (DT Lab
-Ingest Service)[https://github.com/DTLaboratory/dtlab-ingest-scala-alligator]
+The Ingest MQTT client then posts the incoming raw telemetry to the [DT Lab
+Ingest Service](https://github.com/DTLaboratory/dtlab-ingest-scala-alligator)
 via HTTP.
 
 The Ingest Service then transforms the incoming data into a list of
-`name,datetime,value(Double)` observations that it then posts to the (DT Lab
-runtime)[https://github.com/DTLaboratory/dtlab-scala-alligator] where the DTs
+`name,datetime,value(Double)` observations that it then posts to the [DT Lab
+runtime](https://github.com/DTLaboratory/dtlab-scala-alligator) where the DTs
 will be updated in accordance with the `name` calculated/enriched by the ingest
 service.
 
