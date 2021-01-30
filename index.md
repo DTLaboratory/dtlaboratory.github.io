@@ -130,14 +130,22 @@ The DT Lab implementation values actor programming, asynchronous messaging, and
 persistence via event sourcing.
 
 The system is developed with modern cloud infrastructure-as-code tools and
-practices in mind.  A new deployment can be instantiated in the cloud or via
-an IOT solution pushing firmware/appware to a smart edge device
+practices in mind.  A new deployment can be instantiated in the cloud or via an
+IOT solution pushing firmware/appware to a smart edge device
 
 Input from the DT's analogs must arrive in standard marshaling syntaxes (JSON,
 etc...) for out-of-the-box integration.  Output is marshaled in JSON and is
 available as an unbounded stream so that it can be processed by modern
 analytics tools like OpenTSDB, InfluxdB, Apache Spark, Grafana, Elastic Search,
 or accumulated in cloud Blob services like Azure Storage or AWS S3, etc...
+
+A foundational idea in DT Lab is that information from outside the DT Lab
+runtime is normalized into multiple time series before any DT processing.  The
+arriving data is transformed into `name,datetime,value(double)` records before
+it is seen by a DT.  The only context surviving data after it arrives is the
+`name` and `datetime`.  `name` can be overloaded at ingest time via enrichment
+to provide more context to processing but the limitation of context to `name`
+and `datetime` is a hard and fast rule.
 
 #### NO BREAKING API CHANGES
 
@@ -197,6 +205,19 @@ Runtime View
 The system tends to flow from left to right with observations starting at the
 left and DT state shared to standard tools at the right.
 
+Data in the above deployment is read from a remote MQTT server by a container
+instantiated from the (DT Lab MQTT Ingest
+Service)[https://github.com/DTLaboratory/dtlab-ingest-mqtt].
+
+The Ingest MQTT client then posts the incoming raw telemetry to the (DT Lab
+Ingest Service)[https://github.com/DTLaboratory/dtlab-ingest-scala-alligator]
+via HTTP.
+
+The Ingest Service then transforms the incoming data into a list of
+`name,datetime,value(Double)` observations that it then posts to the (DT Lab
+runtime)[https://github.com/DTLaboratory/dtlab-scala-alligator] where the DTs
+will be updated in accordance with the `name` calculated/enriched by the ingest
+service.
 
 Deployment View
 -------
