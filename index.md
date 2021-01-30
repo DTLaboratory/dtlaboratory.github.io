@@ -214,7 +214,7 @@ Ingest Service](https://github.com/DTLaboratory/dtlab-ingest-scala-alligator)
 via HTTP.
 
 The Ingest Service then transforms the incoming data into a list of
-`name,datetime,value(Double)` observations that it then posts to the [DT Lab
+`name,datetime,value(double)` observations that it then posts to the [DT Lab
 runtime](https://github.com/DTLaboratory/dtlab-scala-alligator) where the DTs
 will be updated in accordance with the `name` calculated/enriched by the ingest
 service.
