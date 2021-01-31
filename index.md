@@ -57,7 +57,7 @@ In DT Lab, Each DT:
 
 ## DT Lab Dependencies
 
-  * A database that supports JDBC. We currently develop with Postgres DB - specifically Digital Ocean's managed Postres offering but should work with any post-9.6 Postgres.
+  * A database supported by [Akka Persistence](https://doc.akka.io/docs/akka/current/persistence.html). We currently develop with Postgres DB - specifically Digital Ocean's managed Postres offering but should work with any post-9.6 Postgres.
   * Java and a Java Virtual Machine - development is currently done on Java 11 and 13
   
 ### DT Lab Quick Start (via Docker)
