@@ -18,14 +18,14 @@ ergonomics.___
 
 -------
 
-DT Lab is an actor-oriented distributed computing framework for hosting DTs
+DTLab is an actor-oriented distributed computing framework for hosting DTs
 (Digital Twins).
 
-DT Lab can compute near-realtime insights into the state of complex systems.
+DTLab can compute near-realtime insights into the state of complex systems.
 
-Suggested applications of DT Lab are Internet of Things (IOT), Augmented
+Suggested applications of DTLab are Internet of Things (IOT), Augmented
 Reality (AR), Logistics, streaming analytics - any problem that requires
-near-realtime continuous calculation of actionable states at scale.  DT Lab is
+near-realtime continuous calculation of actionable states at scale.  DTLab is
 especially suited to modeling complex systems of participants that combine and
 advance over time in otherwise difficult to predict ways.
 
@@ -49,24 +49,24 @@ Examples of observations and events monitored by a DTs are:
   * A massively multiplayer online role-playing game (MMORPG) may use DTs for player avatar state
   * A hemisphere evacuation alerting system might act on an approaching asteroid's DT's current speed and distance values - our first demo app uses NASA's Near Earth Orbit API :)
 
-In DT Lab, Each DT:
+In DTLab, Each DT:
 
   * Computes its own state
   * Receives continuous input from counterparts
   * Is independently addressable - ask any DT about its state any time
 
-## DT Lab Dependencies
+## DTLab Dependencies
 
   * A database supported by [Akka Persistence](https://doc.akka.io/docs/akka/current/persistence.html). We currently develop with Postgres DB - specifically Digital Ocean's managed Postres offering but should work with any post-9.6 Postgres.
   * Java and a Java Virtual Machine - development is currently done on Java 11 and 13
   
-### DT Lab Quick Start (via Docker)
+### DTLab Quick Start (via Docker)
 
   * See dependencies above
 
 TODO TODO TODO
 
-### DT Lab Quick Start from Code
+### DTLab Quick Start from Code
 
   * See dependencies above
 
@@ -87,21 +87,21 @@ sbt run
 # see https://somind.tech/dtlab-alligator/doc/dtlab/ for Open API docs
 ```
 
-## DT Lab Fully Functioning Cloud Deployment
+## DTLab Fully Functioning Cloud Deployment
 
 TODO TODO TODO
 
-## DT Lab Architecture
+## DTLab Architecture
 
 Introduction and Goals
 -------
 
-The DT Lab framework enables a user to instantiate a system of digital twins
+The DTLab framework enables a user to instantiate a system of digital twins
 in the public cloud or on-prem cluster of computers.
 
 The project goal is that a useful system can be instantiated from configured
-DT Lab components with complete security and integration features.  It is
-also the goal of DT Lab to support configuration entirely in a declarative
+DTLab components with complete security and integration features.  It is
+also the goal of DTLab to support configuration entirely in a declarative
 deployment-time style via REST-like API - no first class programming language
 coding should be required to program useful DTs.
 
@@ -116,28 +116,28 @@ Constraints
 Context and Scope
 -------
 
-The DT Lab system is operated as a utility and service.
+The DTLab system is operated as a utility and service.
 
-In its initial releases, DT Lab can support DTs for sources that emit telemetry
+In its initial releases, DTLab can support DTs for sources that emit telemetry
 in JSON format.  Other data formats will be added as they are requested.
 
-External automation can interact with the DTs via the DT Lab HTTP API. An
-external system will be able to register a webhook with a DT Lab cluster and
+External automation can interact with the DTs via the DTLab HTTP API. An
+external system will be able to register a webhook with a DTLab cluster and
 listen for all assessments calculated by all DTs as each DT state advances.
 
-DT Lab may be operated by an organization for its own purposes or by a
+DTLab may be operated by an organization for its own purposes or by a
 service provider for its customers - perhaps as a SAAS.
 
 If operated as a SAAS, the operator would need to provide a front-end to
 its customers that supported multi-tenancy.  No changes to the
-DT Lab base code would be required to support multi-tenancy but the API calls
+DTLab base code would be required to support multi-tenancy but the API calls
 to operate the system on behalf of the SAAS users should be sharded across
 clusters with tenant ID enforced in the sharding.
 
 Solution Strategy
 -------
 
-The DT Lab implementation values actor programming, asynchronous messaging, and
+The DTLab implementation values actor programming, asynchronous messaging, and
 persistence via event sourcing.
 
 The system is developed with modern cloud infrastructure-as-code tools and
@@ -150,7 +150,7 @@ available as an unbounded stream so that it can be processed by modern
 analytics tools like OpenTSDB, InfluxdB, Apache Spark, Grafana, Elastic Search,
 or accumulated in cloud Blob services like Azure Storage or AWS S3, etc...
 
-A foundational idea in DT Lab is that information from outside the DT Lab
+A foundational idea in DTLab is that information from outside the DTLab
 runtime is normalized into multiple time series before any DT processing.  The
 arriving data is transformed into `name,datetime,value(double)` records before
 it is seen by a DT.  The only context surviving data after it arrives is the
@@ -217,15 +217,15 @@ The system tends to flow from left to right with observations starting at the
 left and DT state shared to standard tools at the right.
 
 Data in the above deployment is read from a remote MQTT server by a container
-instantiated from the [DT Lab MQTT Ingest
+instantiated from the [DTLab MQTT Ingest
 Service](https://github.com/DTLaboratory/dtlab-ingest-mqtt).
 
-The Ingest MQTT client then posts the incoming raw telemetry to the [DT Lab
+The Ingest MQTT client then posts the incoming raw telemetry to the [DTLab
 Ingest Service](https://github.com/DTLaboratory/dtlab-ingest-scala-alligator)
 via HTTP.
 
 The Ingest Service then transforms the incoming data into a list of
-`name,datetime,value(double)` observations that it then posts to the [DT Lab
+`name,datetime,value(double)` observations that it then posts to the [DTLab
 runtime](https://github.com/DTLaboratory/dtlab-scala-alligator) where the DTs
 will be updated in accordance with the `name` calculated/enriched by the ingest
 service.
@@ -293,12 +293,12 @@ Risks
 
 ## Project Status
 
-DT Lab is currently a single-contributor project by [Ed Sweeney](https://github.com/navicore) 
+DTLab is currently a single-contributor project by [Ed Sweeney](https://github.com/navicore) 
 and licensed with [the MIT Open Source license](https://github.com/dtlaboratory/dtlab-scala-alligator/blob/master/LICENSE).
 
 Pull requests, feedback, and collaboration welcome.
 
-We believe DT Lab is worth studying, implementing, and refining in other
+We believe DTLab is worth studying, implementing, and refining in other
 programming languages and platforms - we intend to create Python, Rust, and
 Erlang/Elixir implementations, time permitting.
 
