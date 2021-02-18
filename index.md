@@ -42,11 +42,8 @@ Examples of observations and events monitored by a DTs are:
 
   * Machine DTs might monitor a machine's engine temperature
   * Supply chain replenishment DTs may monitor retail sales transaction completions
-  * Trading bots might monitor a bank account DT to act on the new availability of funds
   * Energy Efficiency DTs monitor doors that stay open too long
-  * A truck fleet DT monitoring truck odometer readings might adjust truck assignments if it anticipates future mileage-based maintenance window overlaps - it can schedule long haul vs short haul assignments to stagger the out-of-service maintenance windows across the fleet
   * Security DTs fire alerts if motion detectors are triggered
-  * A massively multiplayer online role-playing game (MMORPG) may use DTs for player avatar state
   * A hemisphere evacuation alerting system might act on an approaching asteroid's DT's current speed and distance values - our first demo app uses NASA's Near Earth Orbit API :)
 
 In DTLab, Each DT:
