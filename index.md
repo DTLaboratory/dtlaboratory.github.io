@@ -132,7 +132,7 @@ If operated as a SAAS, the operator would need to provide a front-end to
 its customers that supported multi-tenancy.  No changes to the
 DTLab base code would be required to support multi-tenancy but the API calls
 to operate the system on behalf of the SAAS users should be sharded across
-clusters with tenant ID enforced in the sharding.
+clusters with tenant ID as the primary component of the shard key.
 
 Solution Strategy
 -------
