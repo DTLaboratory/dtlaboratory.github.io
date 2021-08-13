@@ -8,25 +8,24 @@ Architecture Documentation
 
 -------
 
-_this is the project's architecture documentation - follow the github link in the [blue box](https://github.com/dtlaboratory) above to get the code published so far_
+_DTLab's architecture documentation - follow the github link in the [blue box](https://github.com/dtlaboratory) above to get the code_
 
 -------
 
 ___STATUS: UNDER CONSTRUCTION - to run the software requires patience with the
-state of the documentation and the tediousness of the initial API
-ergonomics.___
+documentation and initial API ergonomics.___
 
 -------
 
 DTLab is an actor-oriented distributed computing framework for hosting DTs
 (Digital Twins).
 
-DTLab can compute near-realtime insights into the state of complex systems.
+DTLab computes near-realtime insights into the state of complex systems.
 
-Suggested applications of DTLab are Internet of Things (IOT), Augmented
-Reality (AR), Logistics, streaming analytics - any problem that requires
-near-realtime continuous calculation of actionable states at scale.  DTLab is
-especially suited to modeling complex systems of participants that combine and
+Suggested applications are Internet of Things (IOT), Augmented
+Reality (AR), Logistics, streaming analytics - any problem requiring
+near-realtime continuous recalculation of actionable states at scale.  DTLab is
+especially suited to modeling systems of participants that combine and
 advance over time in otherwise difficult to predict ways.
 
 ## What is a DT?
@@ -38,7 +37,7 @@ software objects, each of whose state is recalculated continuously as
 observations arrive in a low latency unbounded stream from the DT's
 counterpart.
 
-Examples of observations and events monitored by a DTs are:
+Candidate use cases:
 
   * Machine DTs might monitor a machine's engine temperature
   * Supply chain replenishment DTs may monitor retail sales transaction completions
