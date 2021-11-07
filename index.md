@@ -80,7 +80,7 @@ export POSTGRES_PASSWORD="<DB PWD>"
 sbt run
 
 # now you can interact with the unsecured on port 8080 - see examples dir for REST API usage
-# see https://somind.tech/dtlab-alligator/doc/dtlab/ for Open API docs
+# see https://home.dtlaboratory.com/dtlab-api-docs for Open API docs
 ```
 
 ## DTLab Fully Functioning Cloud Deployment
@@ -307,9 +307,9 @@ Erlang/Elixir implementations, time permitting.
 1. Docker images are at [Dockerhub](https://hub.docker.com/orgs/dtlaboratory/repositories) (for now)
 1. [UI](https://sandbox.dtlaboratory.com) - will host a react.js UI for talking to DTs - currently only demo for Auth0 SSO
 1. [Notebooks (Jupyterhub)](https://notebook.somind.tech) - contact Navicore to get your github ID whitelisted
-1. DTLab API [Docs](https://somind.tech/dtlab-alligator/doc/dtlab/) - OpenAPI 3.0
+1. DTLab API [Docs](https://home.dtlaboratory.com/dtlab-api-docs) - OpenAPI 3.0
 1. DTLab API sandbox endpoint - https://sandbox.somind.tech/dtlab-alligator/(type/actor)
-1. DTLab Ingest API [Docs](https://somind.tech/dtlab-alligator/doc/dtlab-ingest/) - OpenAPI 3.0
+1. DTLab Ingest API [Docs](https://home.dtlaboratory.com/dtlab-ingest-api-docs) - OpenAPI 3.0
 1. DTLab Ingest API sandbox endpoint - https://sandbox.somind.tech/dtlab-alligator/extractor/(specId)
 1. Security is Implemented by [Auth0](https://manage.auth0.com/dashboard/us/navicore/) - contact Navicore for access
 1. Project Kanban with backlog and help wanted tags is [here](https://github.com/orgs/dtlaboratory/projects/1)
