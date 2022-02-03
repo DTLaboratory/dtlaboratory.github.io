@@ -35,8 +35,7 @@
         {% if site.github.is_project_page %}
           <a id="forkme_banner" href="{{ site.github.repository_url }}">on GitHub</a>
         {% endif %}
-
-        {{ content }}
+        {% include anchor_headings.html html=content anchorBody="#" %}
       </section>
     </div>
 
