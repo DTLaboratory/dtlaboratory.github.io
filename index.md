@@ -236,7 +236,7 @@ with a managed database.  However, all the DTLab Docker images make no
 Kubernetes or PAAS-database assumption and the system can be run in any
 Docker-enabled environment.
 
-Cross Cutting Concepts
+Crosscutting Concepts
 -------
 
   1. Actor programming - We value actor programming not so much as a means of
